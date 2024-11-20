@@ -74,13 +74,15 @@ impl ApplicationIntegrationType {
 pub fn context(kind: &InteractionContextType) -> TokenStream {
     match kind {
         InteractionContextType::Guild => {
-            quote!(::twilight_model::application::interaction::context_type::InteractionContextType::Guild)
+            quote!(::twilight_model::application::interaction::InteractionContextType::Guild)
         }
         InteractionContextType::BotDm => {
-            quote!(::twilight_model::application::interaction::context_type::InteractionContextType::BotDm)
+            quote!(::twilight_model::application::interaction::InteractionContextType::BotDm)
         }
         InteractionContextType::PrivateChannel => {
-            quote!(::twilight_model::application::interaction::context_type::InteractionContextType::PrivateChannel)
+            quote!(
+                ::twilight_model::application::interaction::InteractionContextType::PrivateChannel
+            )
         }
     }
 }
@@ -89,10 +91,10 @@ pub fn context(kind: &InteractionContextType) -> TokenStream {
 pub fn integration_type(kind: &ApplicationIntegrationType) -> TokenStream {
     match kind {
         ApplicationIntegrationType::GuildInstall => {
-            quote!(::twilight_model::oauth::application_integration_type::ApplicationIntegrationType::GuildInstall)
+            quote!(::twilight_model::oauth::ApplicationIntegrationType::GuildInstall)
         }
         ApplicationIntegrationType::UserInstall => {
-            quote!(::twilight_model::oauth::application_integration_type::ApplicationIntegrationType::UserInstall)
+            quote!(::twilight_model::oauth::ApplicationIntegrationType::UserInstall)
         }
     }
 }
