@@ -20,13 +20,11 @@ tracing-subscriber = { version = "0.3", features = [
     "ansi",
 ], default-features = false }
 
-twilight-gateway = { git = "https://github.com/lyra-music/twilight", branch = "lyra" }
-twilight-http = { git = "https://github.com/lyra-music/twilight", branch = "lyra" }
+twilight-gateway = "0.16.0"
+twilight-http = "0.16.0"
 twilight-interactions = { path = "../twilight-interactions" }
-twilight-model = { git = "https://github.com/lyra-music/twilight", branch = "lyra" }
-twilight-util = { git = "https://github.com/lyra-music/twilight", branch = "lyra", features = [
-    "builder",
-] }
+twilight-model = "0.16.0"
+twilight-util = { version = "0.16.0", features = ["builder"] }
 
 [[example]]
 name = "xkcd-bot"
